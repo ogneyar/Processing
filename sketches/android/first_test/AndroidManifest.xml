@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="ru.leidtogi.first_test">
-    <uses-feature android:name="android.software.live_wallpaper"/>
-    <application android:icon="@mipmap/ic_launcher" android:label="first_test">
-        <service android:exported="true" android:label="first_test" android:name=".MainService" android:permission="android.permission.BIND_WALLPAPER">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="">
+    <application android:icon="@mipmap/ic_launcher" android:label="">
+        <activity android:exported="true" android:name=".MainActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
             <intent-filter>
-                <action android:name="android.service.wallpaper.WallpaperService"/>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-            <meta-data android:name="android.service.wallpaper" android:resource="@xml/wallpaper"/>
-        </service>
-        <activity android:name="processing.android.PermissionRequestor"/>
+        </activity>
     </application>
 </manifest>
